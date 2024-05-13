@@ -31,7 +31,7 @@ public class CreateElements {
         this.sobrenome = sobrenome;
     }
 
-    protected static VBox createVBox(){
+    public  VBox createVBox(){
         VBox vBox = new VBox();
        
         String  styles = 
@@ -49,26 +49,28 @@ public class CreateElements {
         return vBox;
     }
 
-  
+ 
 
-    private static VBox insertVbox(){
+    public  VBox insertVbox(){
         VBox vBox = new VBox();
         ArrayList<Label> labels = new ArrayList<>(); 
-        labels = createLabel();
+        labels = createLabel(getNome());
         for(int i = 0; i< labels.size(); i++){
-            vBox.getChildren().add(labels.get(i)); 
-            
+        vBox.getChildren().add(labels.get(i)); 
+        
         }
         return vBox;
     }
 
 
-    protected static ArrayList<Label> createLabel(){
-        Label labelNome = new Label("Eu sou uma label do tipo nome dentro do vbox");
+    public  ArrayList<Label> createLabel(String nome){
+        String nomeLabel = getNome();
+        System.out.println(nomeLabel);
+        Label labelNome = new Label(nomeLabel);
         Label labelSobrenome = new Label("Eu sou uma label do tipo sobrenome dentro do vbox");
         Label labelEmail = new Label("Eu sou uma label do tipo telefone dentro do vbox");
         Label labelTelefone = new Label("Eu sou uma label do tipo email dentro do vbox");
-
+       
         ArrayList<Label> labels = new ArrayList<>();
 
 

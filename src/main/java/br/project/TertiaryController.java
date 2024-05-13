@@ -88,7 +88,7 @@ public class TertiaryController extends CreateElements implements Ler, Initializ
                 labelTelefone.setText("Telefone: " + telefones.get(i));
                 labelEmail.setText("Email: " + emails.get(i));
 
-                createLabel();
+                createElements.createLabel("dfdfdfdf");
             }
             idVbox.getChildren().add(createVBox());
             
